@@ -1,0 +1,24 @@
+version: '3.8'
+
+services: # 컨테이너 세부 정의
+  db_mysql: # 서비스 명
+    container_name: mysql_docker # 컨테이너 이름
+    platform: linux/amd64 # 플랫폼 운영체제가 m1인 경우 명시해주어야 함.
+    image: mysql:8.0.29
+    ports:
+      - 8080:3306 # 접근 포트 설정 (컨테이너 외부:컨테이너 내부) <- 컨테이너 내부는 무조건 3306
+    volumes: # 컨테이너 내부와 로컬 동기화 볼륨 설정
+      - ./db/docker-database/mysql/conf.d:/etc/mysql/conf.d
+      - ./db/docker-database/mysql/data:/var/lib/mysql
+      - ./db/docker-database/mysql/my.cnf:/etc/mysql/my.cnf # mysql 설정 파일
+    env_file: ./src/config/env/.local.env # db에 주입해줄 env 파일경로. 경로로 입력하지 않으려면 environment에 직접 넣어준다.
+    environment:
+      TZ: Asia/Seoul
+    networks:
+      - backend
+    restart: always
+    command: # 명령어 실행
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+networks:
+  backend:
