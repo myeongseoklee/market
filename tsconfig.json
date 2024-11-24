@@ -9,21 +9,18 @@
     "target": "ES2021",
     "sourceMap": true,
     "outDir": "./dist",
-    "baseUrl": "./",
     "incremental": true,
     "skipLibCheck": true,
-    "strictNullChecks": false,
-    "noImplicitAny": false,
-    "strictBindCallApply": false,
-    "forceConsistentCasingInFileNames": false,
-    "noFallthroughCasesInSwitch": false,
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "strictBindCallApply": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "baseUrl": "./",
     "paths": {
-      "@lib/lib": [
-        "libs/lib/src"
-      ],
-      "@lib/lib/*": [
-        "libs/lib/src/*"
-      ]
+      "@config/*": ["src/config/*"],
+      "@module/*": ["src/module/*"],
+      "@lib/*": ["src/lib/*"]
     }
   }
 }
