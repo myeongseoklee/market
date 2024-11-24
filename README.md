@@ -8,10 +8,8 @@
 
 <details>
 <summary style="display: inline-block;cursor: pointer;">
-    <h3>▶ 요구사항</h3>
+    <h3>요구사항</h3>
 </summary>
-
-### 요구사항
 
 0. 시간적 여유가 된다면 지난 과제를 진행해주세요. => [지난과제 바로가기](https://github.com/kst6294/wanted-preonboarding-challenge-backend-20) <br>
    0-1. 지난 과제를 진행했다면, 용품을 구매할 때 결제가 진행되도록 해주세요. <br>
@@ -44,9 +42,11 @@
 </details>
 
 <br>
-<br>
 
-# 원티드 프리온보딩 챌린지 백엔드 20 사전과제
+<details>
+<summary style="display: inline-block;cursor: pointer;">
+    <h1>지난 과제</h3>
+</summary>
 
 ### 설명
 
@@ -405,4 +405,6 @@
 3. 과제를 진행해주세요.
 4. 소스코드를 Push 하고 PR을 올려주세요.
 5. 요구사항에 대해서 궁금한 점이나 이해가 안되는 부분이 있다면 이슈를 남겨주시거나, 편하게 연락주세요 - kst6294@gmail.com
+</details>
+
 </details>
